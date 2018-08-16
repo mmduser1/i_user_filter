@@ -3,7 +3,7 @@
 超健全な某動画サイトにNGユーザ機能を追加するChrome拡張
 
 # インストール
-1. ZIPを **[ここ](https://github.com/mofurion/i_user_filter/archive/master.zip)** からダウンロードし、解凍
+1. ZIPを **[ここ](https://github.com/mmduser1/i_user_filter/archive/master.zip)** からダウンロードし、解凍
 2. 「chrome://extensions/」右上の「デベロッパーモード」にチェックを入れる
 3. 「パッケージ化されていない拡張機能を読み込む」で先ほど解凍したフォルダを指定
 
