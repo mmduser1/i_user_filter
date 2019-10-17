@@ -2,17 +2,17 @@
 
 超健全な某動画サイトにNGユーザ機能を追加するChrome拡張
 
-# install
+# インストール
 
 - chrome
 
-  https://chrome.google.com/webstore/detail/furui/cnpckkedllgmgnpigkmfkfpflefboamg
+  https://chrome.google.com/webstore/detail/iwara-user-filter/amcbakbciimbegoailafbihegadjaocb
 
 - firefox
 
-  https://addons.mozilla.org/firefox/addon/furui/
+  https://addons.mozilla.org/ja/firefox/addon/iwara-user-filter/
 
-# usage
+# 使い方
 - 右上のボタンまたは「chrome://extensions/」からオプションを開き、NGユーザを入力するだけ
 
 NGにしたユーザの動画は一覧に表示されなくなります。

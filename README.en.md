@@ -10,9 +10,9 @@ A Chrome extension that adds NG user functionality to a super healthy video site
 
 - firefox
 
-  https://addons.mozilla.org/firefox/addon/furui/
+  https://addons.mozilla.org/ja/firefox/addon/iwara-user-filter/
 
-#How to use
+# usage
 - Just open the option from the popup button or "chrome://extensions/" and enter the NG user
 
 NG user videos will not be displayed in the list.
