@@ -1,4 +1,4 @@
-# iwara user filter FORK版
+# iwara user filter FORK version
 
 A Chrome extension that adds NG user functionality to a super healthy video site
 
