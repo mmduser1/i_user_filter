@@ -1,15 +1,18 @@
-# iwara user filter
+# iwara user filter FORK version
 
 超健全な某動画サイトにNGユーザ機能を追加するChrome拡張
 
-# インストール
-1. ZIPを **[ここ](https://github.com/mmduser1/i_user_filter/archive/master.zip)** からダウンロードし、解凍
-2. 「chrome://extensions/」右上の「デベロッパーモード」にチェックを入れる
-3. 「パッケージ化されていない拡張機能を読み込む」で先ほど解凍したフォルダを指定
+# install
 
-注：このインストール方法だとChrome開き直すたびにセキュリティの警告が出ることに気づいたので、後日なんとかします。
+- chrome
 
-# 使い方
+  https://chrome.google.com/webstore/detail/furui/cnpckkedllgmgnpigkmfkfpflefboamg
+
+- firefox
+
+  https://addons.mozilla.org/firefox/addon/furui/
+
+# usage
 - 右上のボタンまたは「chrome://extensions/」からオプションを開き、NGユーザを入力するだけ
 
 NGにしたユーザの動画は一覧に表示されなくなります。
