@@ -1,5 +1,9 @@
 function save_options() {
   console.log("yea");
+  var autopager = document.getElementById("autopager");
+  chrome.storage.local.set({
+    autopager: autopager.checked
+  });
   var data = {};
   "white black gray".split(/\s/).forEach(flag=>{
     data[flag] = document.getElementById(flag).value.trim();
@@ -26,6 +30,11 @@ function restore_options() {
     document.getElementById('white').value = data.white;
     document.getElementById('black').value = data.black;
     document.getElementById('gray').value = data.gray;
+  });
+  chrome.storage.local.get({
+    autopager: false
+  },(settings)=>{
+    document.getElementById("autopager").checked = settings.autopager;
   });
 }
 

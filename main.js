@@ -96,4 +96,22 @@ chrome.storage.local.get(default_data, function(saved){
   add_flag_data(cells, list);
   rebuild_cells(cells, rows);
   add_likes_data(cells); //rebuild_cellsで一旦クラスを全て消すからこれは下にする必要がある
+
+  chrome.storage.local.get({
+    autopager: false
+  },(settings)=>{
+    if(settings.autopager){
+      new MutationObserver((mutations,observer) => {
+        if(root.querySelector("hr.autopagerize_page_separator")){
+          Array.from(root.querySelectorAll(":scope > .views-row")).forEach(function(row){
+            document.querySelector("#block-system-main > div > div > div.view-content > div:nth-child(1)").appendChild(row.cloneNode(true));
+            row.remove();
+          })
+          observer.disconnect();
+        }
+      }).observe(root, {
+        childList: true
+      });
+    }
+  });
 });

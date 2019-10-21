@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "iwara user filter",
-  "version": "0.3",
+  "version": "0.3.1",
   "description": "user filter for iwara",
   "content_scripts": [
     {
