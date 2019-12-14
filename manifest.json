@@ -1,11 +1,11 @@
 {
   "manifest_version": 2,
   "name": "iwara user filter",
-  "version": "0.3.1",
+  "version": "0.4",
   "description": "user filter for iwara",
   "content_scripts": [
     {
-      "matches": ["*://*.iwara.tv/videos*"],
+      "matches": ["*://*.iwara.tv/videos*", "*://*.iwara.tv/images*"],
       "js": ["main.js"],
       "css": ["style.css"],
       "run_at": "document_end"
