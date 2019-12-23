@@ -19,19 +19,36 @@ function add_flag_data(cells, list){
 }
 
 function add_likes_data(cells){
-  Array.from(cells).forEach(function(cell){
-    var icon = cell.querySelector(".right-icon");
-    var likes = icon ? parseInt(icon.textContent) : 0;
-    cell.dataset.likes = likes;
+  chrome.storage.local.get({
+    likeSettings: [
+      {like:50, color:"yellow"},
+      {like:100, color:"red"},
+      {like:200, color:"deeppink"},
+    ]
+  },(settings)=>{
+    let sortedSetting = settings.likeSettings.concat()
+    sortedSetting.sort(function(a,b){
+      return a.like - b.like
+    })
+    sortedSetting.reverse()
 
-    if (likes >= 200){
-      cell.classList.add("likes-over200");
-    } else if (likes >= 100){
-      cell.classList.add("likes-over100");
-    } else if (likes >= 50){
-      cell.classList.add("likes-over50");
-    }
-  });
+    Array.from(cells).forEach(function(cell){
+      var icon = cell.querySelector(".right-icon");
+      var likes = icon ? parseInt(icon.textContent) : 0;
+      cell.dataset.likes = likes;
+
+      var target = cell.getElementsByClassName("right-icon likes-icon")[0]
+      if(typeof target !== 'undefined'){
+        if (likes >= sortedSetting[0].like){
+          target.style = "text-shadow: 0px 1px 2px white, 0px -1px 2px white;-webkit-text-stroke: 0.5px black;color:"+sortedSetting[0].color+";"
+        } else if (likes >= sortedSetting[1].like){
+          target.style = "text-shadow: 0px 1px 2px white, 0px -1px 2px white;color:"+sortedSetting[1].color+";"
+        } else if (likes >= sortedSetting[2].like){
+          target.style.color = sortedSetting[2].color
+        }
+      }
+    })
+  })
 }
 
 function rebuild_cells(cells, rows){

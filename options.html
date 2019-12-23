@@ -3,18 +3,33 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="vender/nano.min.css"/>
+    <script src="vender/pickr.min.js"></script>
+
     <title>iwara user filter - options</title>
 
     <style>
+      body {
+        width: 40em;
+      }
       textarea {
         width: 30em;
         height: 10em;
+      }
+      .color_preview {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+      }
+      #like_settings > div {
+        margin: 10px;
       }
     </style>
   </head>
 
   <body>
-     <p>1行に1ユーザ記入し、保存ボタンを押してください。</p>
+    <p>1行に1ユーザ記入し、保存ボタンを押してください。</p>
     <div>
       <p>非表示にするユーザ</p>
       <textarea id="black"></textarea>
@@ -35,6 +50,14 @@
       <input type="checkbox" id="autopager">
       <p>チェックするとAutoPagerize系のアドオンを入れていても動作するようになりますが、永遠に開発中の機能です</p>
       <p>通常はチェックを入れないで下さい</p>
+    </div>
+
+    <p>LIKEの設定</p>
+    <p>いくつ以上のLIKEを何色にするか設定できます</p>
+    <div id="like_settings">
+      <div class="like_setting_wrapper"><span>LIKE数</span><input id="like0" type="text">以上 <span>色：</span><input id="like_color0" type="text" class="pickr"><div id="like_color_preview0" class="color_preview"></div></div>
+      <div class="like_setting_wrapper"><span>LIKE数</span><input id="like1" type="text">以上 <span>色：</span><input id="like_color1" type="text" class="pickr"><div id="like_color_preview1" class="color_preview"></div></div>
+      <div class="like_setting_wrapper"><span>LIKE数</span><input id="like2" type="text">以上 <span>色：</span><input id="like_color2" type="text" class="pickr"><div id="like_color_preview2" class="color_preview"></div></div>
     </div>
 
     <button id="save">保存</button><output id="status"></output>
